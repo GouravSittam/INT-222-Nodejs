@@ -83,7 +83,18 @@
 // const arch=o.availableParallelism()
 // console.log(arch)
 
+// const o=require('os')
+// const arch=o.type()
+// console.log(arch)
 
+// const o=require('os')
+// const arch=o.uptime()
+// console.log(arch)
 
+// const o=require('os')
+// const arch=o.totalmem()
+// console.log(arch)
 
-
+// const o=require('os')
+// const arch=o.userInfo()
+// console.log(arch)
