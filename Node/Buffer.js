@@ -71,8 +71,19 @@
 // console.log(path.delimiter)
 
 
-const o=require('os')
-const archi=o.arch()
-console.log(archi)
+// const o=require('os')
+// const archi=o.arch()
+// console.log(archi)
+
+// const o=require('os')
+// const arch=o.version()
+// console.log(arch)
+
+// const o=require('os')
+// const arch=o.availableParallelism()
+// console.log(arch)
+
+
+
 
 
