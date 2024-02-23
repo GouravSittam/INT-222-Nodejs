@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=0;
+        var b=0;
+        var c=0;
+        function changeBackground(){
+            var x=document.getElementById('bg');
+            x.style.backgroundColor='rgb('+a+','+b+','+c+')';
+            a+=100;
+            b+=a+50;
+            c+=b+70;
+            if(a>255)a=a-b;
+            if(b>255)b=a;
+            if(c>255)c=b;
+        }
+    </script>
+    <style>
+    #bg {
+    position: fixed;
+    height: 10vh;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 16px; 
+}
+
+@media only screen and (max-width: 768px) {
+    #bg {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 14px; 
+    }
+}
+
+h4{
+    text-align: center;
+    text-decoration: black;
+    text-size-adjust: 40px;
+}
+    </style>
+</head>
+<body>
+    <h4>The body will change collor when UP arrow key is pressed</h4>
+    <input id="bg" onkeyup="changeBackground()" placeholder="write something for you change the color whatever you want in code" style="color: antiquewhite;">
+    
+</body>
+</html>
