@@ -4,17 +4,17 @@ const app = express();
 const port = 3000;
 
 
-app.get('/', (req, res) => {
+app.get('/user', (req, res) => {
     res.send('Hello World!');
 });
 
 
-app.post('/', (req, res) => {
+app.post('/user', (req, res) => {
     res.send('This is a POST request');
 });
 
 
-app.delete('/', (req, res) => {
+app.delete('/user', (req, res) => {
     res.send('This is a DELETE request');
 });
 
