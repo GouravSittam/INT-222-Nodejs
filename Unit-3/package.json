@@ -2,6 +2,7 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "connect": "^3.7.0",
+    "express-session": "^1.18.0",
     "lodash": "^4.17.21"
   }
 }
