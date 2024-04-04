@@ -1,0 +1,12 @@
+new database                    (4/4/2024)
+
+use (name of file)                      //syntax for creating a new database    
+db.createCollection(collectionName);   // syntax for creating a new database
+
+in Mongodb we use collections and json objects to store data in the db.
+
+db.dropdatabse(name of file) //syntax for deleting an existing database currently data base are deleted from the system
+
+
+insert value in Mongodb
+db.student_details.insert({firstName:"John",lastName:"Doe",age:25,gender:"Male",address:{streetAddress:"123 Main Street",city:"New York City",state:"NY"}})
