@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>Signup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background-color: #f0f0f0;
         }
 
         .container {
+            margin-top: 50px;
+            width: 400px;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -25,27 +23,23 @@
 
         h2 {
             text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         label {
-            display: block;
-            margin-bottom: 5px;
+            font-weight: bold;
         }
 
         input[type="text"],
-        input[type="email"],
         input[type="password"] {
             width: 100%;
             padding: 10px;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
 
-        button {
+        button[type="submit"] {
             background-color: #007bff;
             color: #fff;
             padding: 10px 20px;
@@ -54,58 +48,38 @@
             cursor: pointer;
         }
 
-        button:hover {
+        button[type="submit"]:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container fluid">
         <h2>Registration Form</h2>
-        <form id="registrationForm">
+        <form id="registrationForm" action="/signup" method="post">
             <div class="form-group">
-                <label for="name">First Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="lname">Last Name:</label>
-                <input type="text" id="lname" name="lname" required>
+                <input type="text" id="lname" name="lname" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" class="form-control" required>
             </div>
-            <div class="form-group">
-                <button type="submit">Register</button>
-            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
 
-    <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            
-            // Retrieve form data
-            const firstName = document.getElementById('name').value;
-            const lastName = document.getElementById('lname').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            
-            // You can perform further validation here
-            
-            // Display the submitted data
-            console.log('Submitted Data:');
-            console.log('First Name:', firstName);
-            console.log('Last Name:', lastName);
-            console.log('Email:', email);
-            console.log('Password:', password);
-            
-            // You can send the data to the server for registration here using AJAX or fetch
-        });
-    </script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
